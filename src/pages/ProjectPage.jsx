@@ -1,31 +1,70 @@
+import ProjectCatagory from '../components/ProjectCatagory';
 import React from 'react';
-import placeHolder from '../assets/placeholder.jpg';
+import { useState } from 'react';
+
+const initalData = [
+  {
+    id: 0,
+    title: 'React',
+    tags: [
+      { id: 0, title: 'Redux' },
+      { id: 1, title: 'Tailwind' },
+      { id: 2, title: 'Three.js' },
+    ],
+    active: false,
+  },
+  {
+    id: 1,
+    title: 'Django',
+    tags: [
+      { id: 0, title: 'DRF' },
+      { id: 1, title: 'Simple JWT' },
+    ],
+    active: false,
+  },
+  {
+    id: 2,
+    title: 'Streamlit',
+    tags: [
+      { id: 0, title: 'Pandas' },
+      { id: 1, title: 'Plotly' },
+    ],
+    active: false,
+  },
+  {
+    id: 3,
+    title: 'Deployment',
+    tags: [
+      { id: 0, title: 'Docker' },
+      { id: 1, title: 'Nginx' },
+      { id: 2, title: 'Nginx' },
+    ],
+    active: false,
+  },
+];
 
 const ProjectPage = () => {
+  const [projectData, setProjectData] = useState(initalData);
+
+  const handleClick = (item) => {
+    var index = projectData.findIndex((c) => c.id === item.id);
+    var newData = [...projectData]; // makes a copy
+    newData[index].active = !newData[index].active; //sets active state to !self
+    setProjectData(newData); // sets the new data
+  };
+
   return (
     <>
-      <div className="max-w-4xl px-6 lg:py-6 lg:px-0 mx-auto">
-        <h1 className='w-3/5'>Freelance Work & Personal Projects</h1>
+      <div className="container mx-auto flex">
+        <h1 className="w-1/2 py-6 text-6xl">Projects</h1>
       </div>
-      <div className="mx-auto max-w-4xl p-6 lg:p-0">
-        <div className="relative top-0 grid gap-6 md:grid-cols-2 ">
-          {[...Array(4)].map((e, i) => (
-            <div key={i} className="flex flex-col space-y-2">
-              <div
-                className="h-[30rem] w-full bg-cover bg-center bg-no-repeat rounded-xl"
-                style={{
-                  backgroundImage: `url(${placeHolder})`,
-                }}
-              ></div>
-              <h1 className="text-lg">lorem ipsum</h1>
-              <div className="border-b"></div>
-              <div className="flex justify-between">
-                <h1>interaction & development</h1>
-                <h1>2022</h1>
-              </div>
-            </div>
-          ))}
-        </div>
+      <div className="container mx-auto">
+        {projectData.map((item) => (
+          <>
+            <ProjectCatagory data={item} onClick={() => handleClick(item)} />
+          </>
+        ))}
+        <div className="border-b border-black"></div>
       </div>
     </>
   );
