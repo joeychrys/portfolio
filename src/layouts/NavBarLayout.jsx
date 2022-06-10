@@ -1,6 +1,6 @@
-import React from "react";
-import NavBar from "../components/NavBar";
-import { Outlet } from "react-router-dom";
+import NavBar from '../components/NavBar';
+import React from 'react';
+import { Outlet } from 'react-router-dom';
 
 const NavBarLayout = () => {
   return (
