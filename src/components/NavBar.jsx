@@ -19,7 +19,7 @@ const NavBar = () => {
     }
   };
   return (
-    <nav className="relative flex w-screen place-items-center justify-center p-6 z-30">
+    <nav className="relative z-30 flex w-screen place-items-center justify-center p-6">
       <ul className="flex space-x-6">
         {navItems.map((items) => (
           <li
@@ -29,7 +29,9 @@ const NavBar = () => {
               { 'border-black': activeLink(items.path) },
             )}
           >
-            <Link to={items.path}>{items.title}</Link>
+            <Link to={items.path}>
+              <h1 className="text-2xl">{items.title}</h1>
+            </Link>
           </li>
         ))}
       </ul>

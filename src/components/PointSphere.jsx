@@ -1,16 +1,13 @@
-import { useRef, useState } from 'react';
-import { Canvas, useThree } from '@react-three/fiber';
-
-import { useFrame } from '@react-three/fiber';
-import { Quaternion, Vector3 } from 'three';
-import { useMemo } from 'react';
 import { PointMaterial } from '@react-three/drei';
-
-import * as random from 'maath/random';
+import { Points } from '@react-three/drei';
+import { Canvas, useThree } from '@react-three/fiber';
+import { useFrame } from '@react-three/fiber';
 import * as buffer from 'maath/buffer';
 import * as misc from 'maath/misc';
-
-import { Points } from '@react-three/drei';
+import * as random from 'maath/random';
+import { useRef, useState } from 'react';
+import { useMemo } from 'react';
+import { Quaternion, Vector3 } from 'three';
 
 const rotationAxis = new Vector3(3, 1, 0).normalize();
 const q = new Quaternion();
