@@ -5,15 +5,15 @@ import React from 'react';
 const HomePage = () => {
   return (
     <>
-      <div className="absolute top-0 h-screen w-screen">
+      <div className="top-0 absolute h-screen w-screen">
         <PointSphere />
       </div>
-      <div className="absolute top-0 h-screen w-screen">
+      <div className="top-0 absolute h-screen w-screen">
         <div className="container mx-auto h-screen px-10 pt-24 pb-10 sm:py-20">
-          <div className="flex h-full w-full justify-evenly border-0 border-black sm:border"></div>
+          <div className="flex h-full w-full justify-evenly"></div>
         </div>
       </div>
-      <div className="absolute top-0 h-screen w-screen">
+      <div className="top-0 absolute h-screen w-screen">
         <div className="container mx-auto h-screen px-10 pt-24 pb-10 sm:py-20">
           <div className="flex h-full w-full justify-evenly">
             <motion.div
@@ -29,7 +29,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <div className="absolute top-0 h-screen w-screen">
+      <div className="top-0 absolute h-screen w-screen">
         <div className="container mx-auto h-screen px-10 pt-24 pb-10 sm:py-20">
           <div className="flex h-full w-full place-items-end justify-evenly">
             <motion.div

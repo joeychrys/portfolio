@@ -1,16 +1,19 @@
+import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 
-const NavBarLayout = () => {
+const MainLayout = () => {
   return (
     <>
       <NavBar />
-      <main>
+      <main className="min-h-screen relative">
         <Outlet />
       </main>
+      <Footer />
     </>
   );
 };
 
-export default NavBarLayout;
+export default MainLayout;
+

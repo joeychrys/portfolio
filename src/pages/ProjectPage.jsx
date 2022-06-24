@@ -1,3 +1,4 @@
+import Footer from '../components/Footer';
 import ProjectCatagory from '../components/ProjectCatagory';
 import React from 'react';
 import { useState } from 'react';
@@ -17,8 +18,8 @@ const initalData = [
     id: 1,
     title: 'Django',
     tags: [
-      { id: 0, title: 'DRF' },
-      { id: 1, title: 'Simple JWT' },
+      { id: 3, title: 'DRF' },
+      { id: 4, title: 'Simple JWT' },
     ],
     active: false,
   },
@@ -26,8 +27,8 @@ const initalData = [
     id: 2,
     title: 'Streamlit',
     tags: [
-      { id: 0, title: 'Pandas' },
-      { id: 1, title: 'Plotly' },
+      { id: 5, title: 'Pandas' },
+      { id: 6, title: 'Plotly' },
     ],
     active: false,
   },
@@ -35,9 +36,8 @@ const initalData = [
     id: 3,
     title: 'Deployment',
     tags: [
-      { id: 0, title: 'Docker' },
-      { id: 1, title: 'Nginx' },
-      { id: 2, title: 'Nginx' },
+      { id: 7, title: 'Docker' },
+      { id: 8, title: 'Nginx' },
     ],
     active: false,
   },
@@ -55,16 +55,15 @@ const ProjectPage = () => {
 
   return (
     <>
-      <div className="container mx-auto flex">
-        <h1 className="w-1/2 py-6 text-6xl">Projects</h1>
+      <div className="container px-6 pb-20 pt-40 mx-auto flex flex-col">
+        <h1 className="text-6xl max-w-screen-sm">Creating next level digital products</h1>
       </div>
-      <div className="container mx-auto">
+      <div className="container mx-auto p-6">
         {projectData.map((item) => (
           <>
-            <ProjectCatagory data={item} onClick={() => handleClick(item)} />
+            <ProjectCatagory data={item} onClick={() => handleClick(item)}/>
           </>
         ))}
-        <div className="border-b border-black"></div>
       </div>
     </>
   );

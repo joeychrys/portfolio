@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+.DS_Store
+
+compose/
+local.yml
+production.yml
+
+dist/
+dist_test/

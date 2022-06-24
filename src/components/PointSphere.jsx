@@ -1,12 +1,9 @@
-import { PointMaterial } from '@react-three/drei';
-import { Points } from '@react-three/drei';
-import { Canvas, useThree } from '@react-three/fiber';
-import { useFrame } from '@react-three/fiber';
+import { PointMaterial, Points } from '@react-three/drei';
+import { Canvas, useThree, useFrame } from '@react-three/fiber';
 import * as buffer from 'maath/buffer';
 import * as misc from 'maath/misc';
 import * as random from 'maath/random';
-import { useRef, useState } from 'react';
-import { useMemo } from 'react';
+import { useRef, useState, useMemo } from 'react';
 import { Quaternion, Vector3 } from 'three';
 
 const rotationAxis = new Vector3(3, 1, 0).normalize();
@@ -68,9 +65,11 @@ function PointCloud(props) {
 
 const PointSphere = () => {
   return (
-    <Canvas>
-      <PointCloud />
-    </Canvas>
+    <>
+      <Canvas>
+        <PointCloud />
+      </Canvas>
+    </>
   );
 };
 
