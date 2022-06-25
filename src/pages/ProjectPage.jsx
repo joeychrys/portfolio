@@ -1,5 +1,5 @@
-import Footer from '../components/Footer';
 import ProjectCatagory from '../components/ProjectCatagory';
+import ReactCards from '../components/ReactCards';
 import React from 'react';
 import { useState } from 'react';
 
@@ -55,15 +55,21 @@ const ProjectPage = () => {
 
   return (
     <>
-      <div className="container px-6 pb-20 pt-40 mx-auto flex flex-col">
-        <h1 className="text-6xl max-w-screen-sm">Creating next level digital products</h1>
+      <div className="container mx-auto">
+        <h1 className="text-6xl max-w-screen-sm border-b md:border-none px-6 pb-20 pt-40">
+          Creating next level digital products
+        </h1>
       </div>
       <div className="container mx-auto p-6">
         {projectData.map((item) => (
           <>
-            <ProjectCatagory data={item} onClick={() => handleClick(item)}/>
+            <ProjectCatagory data={item} onClick={() => handleClick(item)} />
           </>
         ))}
+        <div className="w-full md:border-b border-0"></div>
+      </div>
+      <div className="w-full visible md:hidden mt-20">
+        <ReactCards />
       </div>
     </>
   );

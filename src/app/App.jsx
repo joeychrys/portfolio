@@ -10,7 +10,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import React from 'react';
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { Routes, Route} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 const App = () => {
   const loading = useSelector((state) => state.router.isLoaded);
@@ -21,7 +21,7 @@ const App = () => {
 
   return (
     <>
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence>
         {loading ? (
           <motion.div key="loader">
             <PageLoader />

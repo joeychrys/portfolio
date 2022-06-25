@@ -1,9 +1,9 @@
-import ProjectCard from './ProjectCard';
-import ProjectCatagoryMobile from './ProjectCatagoryMobile';
+import ReactCards from './ReactCards';
 import classNames from 'classnames';
 import { motion } from 'framer-motion';
 import React from 'react';
 import { HiOutlinePlus } from 'react-icons/hi';
+import PlaceHolderCard from './PlaceHolderCard';
 
 const buttonMotion = {
   inital: {
@@ -36,10 +36,7 @@ const ProjectCatagory = (props) => {
               </div>
             ))}
           </div>
-          <div className="flex w-full justify-evenly p-1 h-72">
-            <ProjectCard key={1}/>
-            <ProjectCard key={2}/>
-          </div>
+          <div className="flex w-full p-1 h-72">{data.id === 0 ? <ReactCards /> : <PlaceHolderCard/>}</div>
         </div>
         <motion.div
           className="h-fit py-5"
@@ -48,7 +45,6 @@ const ProjectCatagory = (props) => {
           <HiOutlinePlus className="h-10 w-10" />
         </motion.div>
       </div>
-      <ProjectCatagoryMobile data={data} />
     </>
   );
 };

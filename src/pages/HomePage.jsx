@@ -24,7 +24,7 @@ const HomePage = () => {
             >
               <h1>I'm a developer</h1>
               <h1 className="mb-2">based out of Dallas</h1>
-              <div className="h-10 w-px bg-black md:h-20"></div>
+              <div className="h-10 w-px bg-black"></div>
             </motion.div>
           </div>
         </div>
@@ -38,9 +38,15 @@ const HomePage = () => {
               transition={{ delay: 9.5, duration: 1 }}
               className="flex h-1/2 flex-col place-items-center justify-center"
             >
-              <div className="mb-2 h-10 w-px bg-black md:h-20"></div>
-              <h1>see how I made this</h1>
-              <h1>on my github</h1>
+              <div className="h-10 w-px bg-black"></div>
+              <a
+                className='text-center hover:border-black border-transparent border rounded-full p-3 transition-all duration-200 ease-in-out'
+                href="https://github.com/joeychrys/portfolio/blob/master/src/components/PointSphere.jsx"
+                target="_blank"
+              > 
+                <h1>see how I made this</h1>
+                <h1>on my github</h1>
+              </a>
             </motion.div>
           </div>
         </div>

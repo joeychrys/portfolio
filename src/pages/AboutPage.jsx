@@ -1,5 +1,3 @@
-import aboutPhoto from '../assets/about.jpg';
-import Footer from '../components/Footer';
 import React from 'react';
 
 const data = [
@@ -39,7 +37,7 @@ const AboutPage = () => {
             I push my work to new horizons, always putting quality first. Always exploring...
           </h1>
         </div>
-        <img src={aboutPhoto} alt="picture of person" className="sm:w-1/2" />
+        <img src="https://images.pexels.com/photos/11987412/pexels-photo-11987412.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="placeholder picture of two people on cliff" className="sm:w-1/2" />
       </div>
       <div className="flex sm:flex-row flex-col p-6 sm:container sm:mx-auto sm:space-x-6">
         {data.map((item) => (
