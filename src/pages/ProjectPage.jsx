@@ -56,19 +56,19 @@ const ProjectPage = () => {
   return (
     <>
       <div className="container mx-auto">
-        <h1 className="text-6xl max-w-screen-sm border-b md:border-none px-6 pb-20 pt-40">
+        <h1 className="max-w-screen-sm px-6 pt-40 pb-20 text-6xl border-b md:border-none">
           Creating next level digital products
         </h1>
       </div>
-      <div className="container mx-auto p-6">
+      <div className="container p-6 mx-auto">
         {projectData.map((item) => (
           <>
             <ProjectCatagory data={item} onClick={() => handleClick(item)} />
           </>
         ))}
-        <div className="w-full md:border-b border-0"></div>
+        <div className="w-full border-0 md:border-b"></div>
       </div>
-      <div className="w-full visible md:hidden mt-20">
+      <div className="visible w-full mt-20 md:hidden">
         <ReactCards />
       </div>
     </>

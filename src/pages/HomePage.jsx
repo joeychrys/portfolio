@@ -5,42 +5,42 @@ import React from 'react';
 const HomePage = () => {
   return (
     <>
-      <div className="top-0 absolute h-screen w-screen">
+      <div className="absolute top-0 w-screen h-screen">
         <PointSphere />
       </div>
-      <div className="top-0 absolute h-screen w-screen">
-        <div className="container mx-auto h-screen px-10 pt-24 pb-10 sm:py-20">
-          <div className="flex h-full w-full justify-evenly"></div>
+      <div className="absolute top-0 w-screen h-screen">
+        <div className="container h-screen px-10 pt-24 pb-10 mx-auto sm:py-20">
+          <div className="flex w-full h-full justify-evenly"></div>
         </div>
       </div>
-      <div className="top-0 absolute h-screen w-screen">
-        <div className="container mx-auto h-screen px-10 pt-24 pb-10 sm:py-20">
-          <div className="flex h-full w-full justify-evenly">
+      <div className="absolute top-0 w-screen h-screen">
+        <div className="container h-screen px-10 pt-24 pb-10 mx-auto sm:py-20">
+          <div className="flex w-full h-full justify-evenly">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 9.5, duration: 1 }}
-              className="flex h-1/3 flex-col place-items-center justify-center sm:h-1/2"
+              className="flex flex-col justify-center h-1/3 place-items-center sm:h-1/2"
             >
               <h1>I'm a developer</h1>
               <h1 className="mb-2">based out of Dallas</h1>
-              <div className="h-10 w-px bg-black"></div>
+              <div className="w-px h-10 bg-black"></div>
             </motion.div>
           </div>
         </div>
       </div>
-      <div className="top-0 absolute h-screen w-screen">
-        <div className="container mx-auto h-screen px-10 pt-24 pb-10 sm:py-20">
-          <div className="flex h-full w-full place-items-end justify-evenly">
+      <div className="absolute top-0 w-screen h-screen">
+        <div className="container h-screen px-10 pt-24 pb-10 mx-auto sm:py-20">
+          <div className="flex w-full h-full place-items-end justify-evenly">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 9.5, duration: 1 }}
-              className="flex h-1/2 flex-col place-items-center justify-center"
+              className="flex flex-col justify-center h-1/2 place-items-center"
             >
-              <div className="h-10 w-px bg-black"></div>
+              <div className="w-px h-10 bg-black"></div>
               <a
-                className='text-center hover:border-black border-transparent border rounded-full p-3 transition-all duration-200 ease-in-out'
+                className='p-3 text-center transition-all duration-200 ease-in-out border border-transparent rounded-full hover:border-black'
                 href="https://github.com/joeychrys/portfolio/blob/master/src/components/PointSphere.jsx"
                 target="_blank"
               > 

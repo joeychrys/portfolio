@@ -34,8 +34,8 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="flex w-screen sm:justify-between justify-center p-6 z-10 absolute top-0 h-20">
-      <div className="sm:flex space-x-1 justify-center place-items-center hidden sm:visible">
+    <nav className="absolute top-0 z-10 flex justify-center w-screen h-20 p-6 sm:justify-between">
+      <div className="justify-center hidden space-x-1 sm:flex place-items-center sm:visible">
         <div
           onClick={() => dispatch(setCursor())}
           className={classNames(
@@ -45,7 +45,7 @@ const NavBar = () => {
             },
           )}
         />
-        <h1 className="text-xl opacity-0 peer-hover:opacity-100 transition-opacity pointer-events-none">
+        <h1 className="text-xl transition-opacity opacity-0 pointer-events-none peer-hover:opacity-100">
           {activeCursor ? 'disable cursor' : 'enable cursor'}
         </h1>
       </div>

@@ -27,11 +27,11 @@ const data = [
 const AboutPage = () => {
   return (
     <>
-      <div className="container px-6 pb-20 pt-40 mx-auto flex flex-col border-b relative top-0">
-        <h1 className="text-6xl max-w-screen-sm">Helping brands thrive in the digital world</h1>
+      <div className="container relative top-0 flex flex-col px-6 pt-40 pb-20 mx-auto border-b">
+        <h1 className="max-w-screen-sm text-6xl">Helping brands thrive in the digital world</h1>
       </div>
-      <div className="container flex mx-auto my-20 sm:space-x-6 p-6 sm:flex-row flex-col-reverse sm:justify-between">
-        <div className="flex justify-end sm:mt-0 mt-6">
+      <div className="container flex flex-col-reverse p-6 mx-auto my-20 sm:space-x-6 sm:flex-row sm:justify-between">
+        <div className="flex justify-end mt-6 sm:mt-0">
           <h1 className="max-w-sm">
             I help companies from all over the world with tailor-made solutions. With each project,
             I push my work to new horizons, always putting quality first. Always exploring...
@@ -39,10 +39,10 @@ const AboutPage = () => {
         </div>
         <img src="https://images.pexels.com/photos/11987412/pexels-photo-11987412.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="placeholder picture of two people on cliff" className="sm:w-1/2" />
       </div>
-      <div className="flex sm:flex-row flex-col p-6 sm:container sm:mx-auto sm:space-x-6">
+      <div className="flex flex-col p-6 sm:flex-row sm:container sm:mx-auto sm:space-x-6">
         {data.map((item) => (
-          <div key={item.id} className="sm:w-1/3 space-y-6">
-            <h1 className="border-b py-6 text-sm text-gray-500">{item.value}</h1>
+          <div key={item.id} className="space-y-6 sm:w-1/3">
+            <h1 className="py-6 text-sm text-gray-500 border-b">{item.value}</h1>
             <h1 className="text-3xl">{item.title}</h1>
             <p>{item.content}</p>
           </div>

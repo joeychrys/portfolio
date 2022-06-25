@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="flex w-screen justify-between p-6 mt-20 mx-auto bg-black rounded-t-3xl h-24 place-items-end">
+    <footer className="flex justify-between w-screen h-24 p-6 mx-auto mt-20 bg-black rounded-t-3xl place-items-end">
       <div className="">
         <h1 className="text-xs text-gray-500">Version</h1>
         <h1 className='text-white'>2022 © Edition</h1>

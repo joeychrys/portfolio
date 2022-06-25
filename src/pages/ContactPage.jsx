@@ -35,17 +35,17 @@ const data = [
 const ContactPage = () => {
   return (
     <>
-      <div className="container px-6 pb-20 pt-40 mx-auto flex flex-col">
-        <h1 className="text-6xl max-w-screen-sm">Let's start a project together</h1>
+      <div className="container flex flex-col px-6 pt-40 pb-20 mx-auto">
+        <h1 className="max-w-screen-sm text-6xl">Let's start a project together</h1>
       </div>
-      <div className="container mx-auto px-6 flex-col flex sm:flex-row ">
-        <form className="py-20 w-2/3">
+      <div className="container flex flex-col px-6 mx-auto sm:flex-row ">
+        <form className="w-2/3 py-20">
           {data.map((item) => (
-            <div key={item.id} className="group border-t flex justify-start">
-              <h1 className="text-sm text-gray-500 px-6 flex place-items-center">
+            <div key={item.id} className="flex justify-start border-t group">
+              <h1 className="flex px-6 text-sm text-gray-500 place-items-center">
                 {item.position}
               </h1>
-              <div className="flex flex-col space-y-6 m-6">
+              <div className="flex flex-col m-6 space-y-6">
                 <label htmlFor="floating_password" className="text-xl">
                   {item.label}
                 </label>
@@ -59,17 +59,17 @@ const ContactPage = () => {
             </div>
           ))}
         </form>
-        <div className="py-20 w-1/3 place-items-end flex flex-col">
-          <div className="space-y-1 text-start w-1/2">
+        <div className="flex flex-col w-1/3 py-20 place-items-end">
+          <div className="w-1/2 space-y-1 text-start">
             <h1 className="text-xs text-gray-500">Contact Details</h1>
             <h2>info@joeychrys.com</h2>
             <h2>+1 234 5678</h2>
           </div>
-          <div className="mt-6 space-y-1 text-start w-1/2">
+          <div className="w-1/2 mt-6 space-y-1 text-start">
             <h1 className="text-xs text-gray-500">Business Details</h1>
             <h2>Location: Dallas Texas</h2>
           </div>
-          <div className="mt-6 space-y-1 text-start w-1/2">
+          <div className="w-1/2 mt-6 space-y-1 text-start">
             <h1 className="text-xs text-gray-500">Socials</h1>
             <h2>LinkedIn</h2>
             <h2>Instagram</h2>
