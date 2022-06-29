@@ -25,8 +25,7 @@ dist-ssr
 
 .DS_Store
 
-compose/
-local.yml
+compose/traefik
 production.yml
 
 dist/

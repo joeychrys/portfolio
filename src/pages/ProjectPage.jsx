@@ -1,7 +1,7 @@
 import ProjectCatagory from '../components/ProjectCatagory';
 import ReactCards from '../components/ReactCards';
-import React from 'react';
-import { useState } from 'react';
+import { motion } from 'framer-motion';
+import React, { useState } from 'react';
 
 const initalData = [
   {
@@ -43,6 +43,12 @@ const initalData = [
   },
 ];
 
+const titleAnimation = {
+  initial: { x: -500 },
+  animate: { x: 0 },
+  transition: {delay:1.5}
+};
+
 const ProjectPage = () => {
   const [projectData, setProjectData] = useState(initalData);
 
@@ -55,10 +61,16 @@ const ProjectPage = () => {
 
   return (
     <>
-      <div className="container mx-auto">
-        <h1 className="max-w-screen-sm px-6 pt-40 pb-20 text-6xl border-b md:border-none">
+      <div className="container mx-auto overflow-hidden">
+        <motion.h1
+          variants={titleAnimation}
+          animate="animate"
+          initial="initial"
+          transition={titleAnimation.transition}
+          className="max-w-screen-sm px-6 pt-40 pb-20 text-6xl border-b md:border-none"
+        >
           Creating next level digital products
-        </h1>
+        </motion.h1>
       </div>
       <div className="container p-6 mx-auto">
         {projectData.map((item) => (

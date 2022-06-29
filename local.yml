@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: ./compose/nginx/Dockerfile
+    image: local_nginx
+    container_name: nginx_react
+    restart: always
+    ports:
+      - 3000:3000
